@@ -1,0 +1,181 @@
+
+<!-- BookVerse Book List -->
+
+<section class="books-section">
+
+  <div class="section-header">
+
+    <p class="section-label">EXPLORE YOUR NEXT READ</p>
+
+    <h1>Discover Our Book Collection</h1>
+
+    <p class="section-description">
+      Browse timeless classics, discover inspiring stories,
+      and manage your personal digital library.
+    </p>
+
+    <a routerLink="/books/new" class="add-book-btn">
+      + Add New Book
+    </a>
+
+  </div>
+
+  <!-- SEARCH AND GENRE FILTERS -->
+
+  <div class="book-filters">
+
+    <div class="filter-group">
+
+      <label for="searchBooks">Search Books</label>
+
+      <input
+        type="search"
+        id="searchBooks"
+        placeholder="Search by title or author..."
+        [ngModel]="searchTerm()"
+        (ngModelChange)="searchTerm.set($event)"
+      >
+
+    </div>
+
+    <div class="filter-group">
+
+      <label for="genreFilter">Filter by Genre</label>
+
+      <select
+        id="genreFilter"
+        [ngModel]="selectedGenre()"
+        (ngModelChange)="selectedGenre.set($event)"
+      >
+
+        @for (genre of genres(); track genre) {
+          <option [value]="genre">
+            {{ genre }}
+          </option>
+        }
+
+      </select>
+
+    </div>
+
+    <button
+      type="button"
+      class="clear-filters-btn"
+      (click)="clearFilters()"
+    >
+      Clear Filters
+    </button>
+
+  </div>
+
+  <!-- BOOK COLLECTION -->
+
+  @if (isLoading()) {
+
+    <p class="status-message">
+      Loading your books...
+    </p>
+
+  }
+
+  @if (errorMessage()) {
+
+    <p class="error-message">
+      {{ errorMessage() }}
+    </p>
+
+  }
+
+  @if (!isLoading() && !errorMessage()) {
+
+    <p class="results-count">
+      Showing {{ filteredBooks().length }}
+      of {{ books().length }} books
+    </p>
+
+    <div class="books-grid">
+
+      @for (book of filteredBooks(); track book.id) {
+
+        <article class="book-card">
+
+          <div class="book-card-top">
+
+            <span class="book-genre">
+              {{ book.genre }}
+            </span>
+
+            <button
+              type="button"
+              class="favorite-btn"
+              [class.is-favorite]="bookService.isFavorite(book.id)"
+              [attr.aria-label]="bookService.isFavorite(book.id)
+                ? 'Remove from favorites'
+                : 'Add to favorites'"
+              [attr.aria-pressed]="bookService.isFavorite(book.id)"
+              (click)="toggleFavorite(book.id)"
+            >
+              {{ bookService.isFavorite(book.id) ? '♥' : '♡' }}
+            </button>
+
+          </div>
+
+          <div class="book-content">
+
+            <h2>{{ book.title }}</h2>
+
+            <p class="book-author">
+              by {{ book.author }}
+            </p>
+
+            <p class="book-description">
+              {{ book.description }}
+            </p>
+
+            <p class="book-year">
+              Published: {{ book.year }}
+            </p>
+
+          </div>
+
+          <div class="book-actions">
+
+            <a
+              [routerLink]="['/books', book.id]"
+              class="view-btn"
+            >
+              View Details
+            </a>
+
+            <a
+              [routerLink]="['/books/edit', book.id]"
+              class="edit-btn"
+            >
+              Edit
+            </a>
+
+            <button
+              type="button"
+              class="delete-btn"
+              (click)="deleteBook(book.id)"
+            >
+              Delete
+            </button>
+
+          </div>
+
+        </article>
+
+      } @empty {
+
+        <p class="status-message">
+          No books match your search or selected genre.
+        </p>
+
+      }
+
+    </div>
+
+  }
+
+</section>

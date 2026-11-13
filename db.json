@@ -1,0 +1,29 @@
+{
+  "books": [
+    {
+      "id": "qEXSthRy9Cc",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "description": "**The Alchemist** is more than a story; it is an extraordinary journey into the depths of the human soul, where dreams become destinies and the impossible becomes a matter of belief.\n\nThrough a world filled with mystery, wisdom, adventure, and unexpected encounters, *The Alchemist* reminds us that the greatest treasures are not always found where we expect them to be. Sometimes, the journey itself is the greatest reward.\n\nIt is a powerful tale of courage, self-discovery, faith, and the pursuit of one's Personal Legend—a reminder that the universe has a mysterious way of guiding those brave enough to follow their hearts.\n\n**Because some dreams are too extraordinary to remain dreams, some journeys are too meaningful to abandon, and some destinies are simply written in the stars.**",
+      "genre": "Fantasy",
+      "year": 1988
+    },
+    {
+      "title": "Tuesdays with Morrie",
+      "author": "Mitch Albom",
+      "description": "Tuesdays with Morrie by Mitch Albom is an extraordinary, heart-wrenching true story about an unlikely reunion between a former student and his beloved professor, Morrie Schwartz. As Morrie faces the final chapter of his life while battling ALS, their Tuesday meetings become something far greater than lessons in a classroom. They become a profound exploration of love, mortality, forgiveness, family, friendship, and the meaning of existence.\n\nWith every conversation, Morrie reveals a wisdom that modern society often forgets: that wealth cannot replace happiness, success cannot replace purpose, and no achievement is more valuable than the love we give and receive.\n\nThrough laughter, tears, memories, and difficult truths, Mitch discovers that the greatest education of his life is happening not in a university lecture hall, but beside a man who is slowly preparing to say goodbye.\n\nThis is more than a story about death. It is a celebration of life. A reminder to embrace every moment, cherish the people who matter, forgive before it is too late, and never become so busy making a living that you forget to live.\n\nBecause in the end, our legacy is not measured by what we accumulate, the titles we earn, or the success we achieve. It is measured by the lives we touch, the love we leave behind, and the memories that continue long after we are gone.",
+      "genre": "Fantasy",
+      "year": 1997,
+      "id": "j4FqSc1u_jM"
+    },
+    {
+      "title": "Angels & Demons",
+      "author": "Dan Brown",
+      "description": "Beneath the sacred walls of the Vatican lies a secret so dangerous that its revelation could shake the foundations of civilization.\n\nWhen a brilliant scientist is murdered and a mysterious symbol is discovered branded into his chest, Harvard symbologist Robert Langdon is drawn into a terrifying investigation involving the Illuminati—a legendary secret brotherhood believed to have vanished centuries ago. But the ancient enemy has returned, and its vengeance is about to unfold at the very heart of the Catholic Church.\n\nAs the world watches the Vatican prepare for the election of a new pope, four cardinals are abducted, each marked for a horrifying fate. A devastating weapon of unimaginable power has been stolen, and an invisible countdown begins.\n\nFrom the shadowy corridors of ancient Rome to the hidden chambers of sacred architecture, Langdon must decipher cryptic symbols, uncover forgotten secrets, and follow a trail of clues buried in centuries of history. Every revelation brings him closer to the truth, but also closer to a catastrophe that could destroy thousands of lives.\n\nIn a world where science challenges religion, where truth is buried beneath centuries of deception, and where the line between good and evil becomes dangerously blurred, nothing is as it seems.\n\nAngels & Demons is a breathtaking race against time—a labyrinth of ancient mysteries, forbidden knowledge, powerful conspiracies, and shocking revelations.\n\nBecause sometimes the greatest threat to humanity isn't the darkness we fear, but the truth we refuse to see.\n\nWhen the battle between science and faith begins, even heaven and hell may not be what they seem.",
+      "genre": "Mystery",
+      "year": 2000,
+      "id": "zhtw3TV1274"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

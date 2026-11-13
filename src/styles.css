@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* =========================================
+   BOOKVERSE - GLOBAL STYLING
+   Midnight Blue & Rose Gold Theme
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --midnight: #101d36;
+    --navy: #28436b;
+    --rose-gold: #c98f86;
+    --soft-rose: #e8c3bc;
+    --pearl: #f5f0f1;
+    --white: #ffffff;
+    --text: #24344e;
+    --muted: #65738a;
+    --border: #e5dce1;
+    --shadow: 0 12px 35px rgba(16, 29, 54, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--pearl);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+}
+
+a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--rose-gold);
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--rose-gold);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--soft-rose);
+    color: var(--midnight);
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+
+.site-header {
+    background: linear-gradient(135deg, var(--midnight), var(--navy));
+    border-bottom: 4px solid var(--rose-gold);
+    box-shadow: 0 6px 25px rgba(16, 29, 54, 0.15);
+}
+
+.header-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.site-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.site-logo span {
+    color: var(--soft-rose);
+}
+
+.site-logo:hover {
+    color: var(--white);
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-navigation a {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.main-navigation a:hover {
+    color: var(--soft-rose);
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    max-width: 1250px;
+    min-height: 65vh;
+    margin: 0 auto;
+    padding: 55px 30px 80px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: var(--midnight);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 4px solid var(--rose-gold);
+}
+
+.site-footer p {
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+.site-footer p:last-child {
+    color: var(--soft-rose);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .main-navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .main-content {
+        padding: 35px 18px 60px;
+    }
+
+    .site-logo {
+        font-size: 27px;
+    }
+}

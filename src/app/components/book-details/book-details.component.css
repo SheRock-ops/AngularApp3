@@ -1,0 +1,318 @@
+
+/* =========================================
+   BOOKVERSE - BOOK DETAILS
+   Royal Burgundy & Gold Theme
+========================================= */
+
+.book-details-section {
+    min-height: 70vh;
+    padding: 70px 20px 100px;
+    background: linear-gradient(
+        135deg,
+        #faf4ee 0%,
+        #f2e7e1 50%,
+        #eaddd5 100%
+    );
+    box-sizing: border-box;
+}
+
+.details-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fffdf9;
+    border: 1px solid #e7d6c3;
+    border-top: 5px solid #c9a46c;
+    border-radius: 18px;
+    box-shadow:
+        0 15px 45px rgba(53, 21, 37, 0.12),
+        0 4px 12px rgba(84, 31, 53, 0.06);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+    box-shadow:
+        0 20px 55px rgba(53, 21, 37, 0.16),
+        0 6px 18px rgba(84, 31, 53, 0.08);
+}
+
+/* =========================================
+   DETAILS HEADER
+========================================= */
+
+.details-header {
+    text-align: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e7d6c3;
+}
+
+.section-label {
+    color: #926a36;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.book-genre {
+    display: inline-block;
+    padding: 9px 17px;
+    background: #f1e3d3;
+    color: #70394c;
+    border: 1px solid #dfc7a9;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.details-header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #541f35;
+    font-size: 44px;
+    margin: 25px 0 12px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.book-author {
+    color: #926a36;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================================
+   BOOK INFORMATION
+========================================= */
+
+.details-content {
+    padding: 40px 0;
+}
+
+.book-information h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #541f35;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.book-description {
+    color: #66565c;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.book-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.meta-item {
+    padding: 22px;
+    background: linear-gradient(
+        145deg,
+        #fffaf4,
+        #f6ece2
+    );
+    border: 1px solid #e7d6c3;
+    border-left: 3px solid #c9a46c;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.meta-item:hover {
+    transform: translateY(-4px);
+    border-color: #c9a46c;
+    box-shadow: 0 8px 20px rgba(84, 31, 53, 0.10);
+}
+
+.meta-label {
+    display: block;
+    color: #926a36;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.meta-item strong {
+    color: #541f35;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.details-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 30px;
+    border-top: 1px solid #e7d6c3;
+}
+
+.back-btn,
+.favorite-btn,
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Back to Collection */
+
+.back-btn {
+    background: #faf4ee;
+    color: #541f35;
+    border: 1px solid #dfc7a9;
+}
+
+.back-btn:hover {
+    background: #f1e3d3;
+    border-color: #c9a46c;
+    transform: translateY(-2px);
+}
+
+/* Add to Favorites */
+
+.favorite-btn {
+    background: #fffdf9;
+    color: #541f35;
+    border: 1px solid #c9a46c;
+}
+
+.favorite-btn:hover {
+    background: #f1e3d3;
+    color: #541f35;
+    box-shadow: 0 5px 15px rgba(201, 164, 108, 0.20);
+    transform: translateY(-2px);
+}
+
+/* Edit Book */
+
+.edit-btn {
+    background: linear-gradient(
+        135deg,
+        #541f35,
+        #351525
+    );
+    color: #fffaf4;
+    border: 1px solid #541f35;
+    box-shadow: 0 4px 12px rgba(84, 31, 53, 0.15);
+}
+
+.edit-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #c9a46c,
+        #b58b50
+    );
+    color: #351525;
+    border-color: #b58b50;
+    box-shadow: 0 8px 20px rgba(84, 31, 53, 0.18);
+    transform: translateY(-2px);
+}
+
+.back-btn:focus-visible,
+.favorite-btn:focus-visible,
+.edit-btn:focus-visible {
+    outline: 3px solid #c9a46c;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   STATUS AND ERROR MESSAGES
+========================================= */
+
+.status-message,
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #66565c;
+}
+
+.error-message {
+    color: #9e3046;
+    background: #fff0ed;
+    border: 1px solid #e7b7b4;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+    .book-details-section {
+        padding: 35px 15px 60px;
+    }
+
+    .details-container {
+        padding: 30px 20px;
+    }
+
+    .details-header h1 {
+        font-size: 32px;
+    }
+
+    .book-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .details-actions {
+        flex-direction: column;
+    }
+
+    .back-btn,
+    .favorite-btn,
+    .edit-btn {
+        width: 100%;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .details-container,
+    .meta-item,
+    .back-btn,
+    .favorite-btn,
+    .edit-btn {
+        transition: none;
+    }
+
+    .meta-item:hover,
+    .back-btn:hover,
+    .favorite-btn:hover,
+    .edit-btn:hover {
+        transform: none;
+    }
+
+}

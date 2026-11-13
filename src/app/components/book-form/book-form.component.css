@@ -1,0 +1,207 @@
+
+/* =========================================
+   BOOKVERSE - ADD BOOK FORM
+   Midnight Blue & Rose Gold Theme
+========================================= */
+
+.book-form-section {
+    min-height: 70vh;
+    padding: 70px 20px 100px;
+    background: #f5f0f1;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px;
+    background: #ffffff;
+    border: 1px solid #e5dce1;
+    border-top: 5px solid #c98f86;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(16, 29, 54, 0.09);
+    box-sizing: border-box;
+}
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-label {
+    color: #b77c76;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.form-header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #101d36;
+    font-size: 40px;
+    margin: 0 0 15px;
+}
+
+.form-header p:not(.section-label) {
+    color: #65738a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #24344e;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 15px 16px;
+    background: #faf8f9;
+    color: #24344e;
+    border: 1px solid #e5dce1;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c98f86;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(201, 143, 134, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ba3b2;
+}
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e5dce1;
+}
+
+.cancel-btn,
+.save-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background: #f5f0f1;
+    color: #28436b;
+    border: 1px solid #e5dce1;
+}
+
+.cancel-btn:hover {
+    background: #e5dce1;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #101d36, #28436b);
+    color: #ffffff;
+    border: 1px solid #c98f86;
+}
+
+.save-btn:hover:not(:disabled) {
+    background: #c98f86;
+    color: #101d36;
+    transform: translateY(-2px);
+}
+
+.save-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message {
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #fff0f1;
+    color: #a23b45;
+    border: 1px solid #e7c4c8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 650px) {
+
+    .book-form-section {
+        padding: 35px 15px 60px;
+    }
+
+    .form-container {
+        padding: 28px 20px;
+    }
+
+    .form-header h1 {
+        font-size: 32px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+
+}

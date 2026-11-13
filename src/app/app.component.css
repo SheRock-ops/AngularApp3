@@ -1,0 +1,268 @@
+
+/* =========================================
+   BOOKVERSE - MAIN APPLICATION
+   Royal Burgundy & Gold Theme
+========================================= */
+
+/* =========================================
+   MAIN APPLICATION LAYOUT
+========================================= */
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf4ee;
+    color: #351525;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        #351525,
+        #541f35,
+        #70394c
+    );
+    border-bottom: 4px solid #c9a46c;
+    box-shadow: 0 6px 25px rgba(53, 21, 37, 0.18);
+    box-sizing: border-box;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1250px;
+    min-height: 90px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   BOOKVERSE LOGO
+========================================= */
+
+.site-logo {
+    color: #fffaf4;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.site-logo span {
+    color: #e0bd82;
+}
+
+.site-logo:hover {
+    color: #e0bd82;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.main-navigation a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 17px;
+    color: #fffaf4;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: #e0bd82;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   ADD BOOK NAVIGATION BUTTON
+========================================= */
+
+.main-navigation .nav-add-btn {
+    padding: 12px 22px;
+    background: #c9a46c;
+    color: #351525;
+    border: 1px solid #e0bd82;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.main-navigation .nav-add-btn:hover {
+    background: #e0bd82;
+    color: #351525;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    display: block;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    background: #faf4ee;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    width: 100%;
+    padding: 55px 25px 45px;
+    background: linear-gradient(
+        135deg,
+        #351525,
+        #541f35
+    );
+    color: #f7eee5;
+    border-top: 4px solid #c9a46c;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    margin: 0 0 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.footer-brand span {
+    color: #e0bd82;
+}
+
+.footer-tagline {
+    margin: 0 0 28px;
+    color: #e9d8ce;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.site-footer p {
+    line-height: 1.7;
+}
+
+.footer-tech {
+    margin-top: 12px;
+    color: #e0bd82;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.site-logo:focus-visible,
+.main-navigation a:focus-visible {
+    outline: 3px solid #e0bd82;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .header-container {
+        padding: 20px 25px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .main-navigation {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header-container {
+        padding: 20px 15px;
+    }
+
+    .site-logo {
+        font-size: 28px;
+    }
+
+    .main-navigation {
+        gap: 6px;
+    }
+
+    .main-navigation a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .main-navigation .nav-add-btn {
+        padding: 10px 14px;
+    }
+
+    .site-footer {
+        padding: 40px 20px;
+    }
+
+    .footer-brand {
+        font-size: 26px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-logo,
+    .main-navigation a {
+        transition: none;
+    }
+
+    .main-navigation .nav-add-btn:hover {
+        transform: none;
+    }
+
+}

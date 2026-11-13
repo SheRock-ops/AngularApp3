@@ -1,0 +1,106 @@
+
+<!-- BookVerse Book Details -->
+
+<section class="book-details-section">
+
+  @if (isLoading()) {
+    <p class="status-message">
+      Loading book details...
+    </p>
+  }
+
+  @if (errorMessage()) {
+    <p class="error-message">
+      {{ errorMessage() }}
+    </p>
+
+    <a routerLink="/books" class="back-btn">
+      Back to Collection
+    </a>
+  }
+
+  @if (!isLoading() && book(); as selectedBook) {
+
+    <div class="details-container">
+
+      <div class="details-header">
+
+        <p class="section-label">
+          DISCOVER THE STORY
+        </p>
+
+        <span class="book-genre">
+          {{ selectedBook.genre }}
+        </span>
+
+        <h1>{{ selectedBook.title }}</h1>
+
+        <p class="book-author">
+          by {{ selectedBook.author }}
+        </p>
+
+      </div>
+
+      <div class="details-content">
+
+        <div class="book-information">
+
+          <h2>About This Book</h2>
+
+          <p class="book-description">
+            {{ selectedBook.description }}
+          </p>
+
+          <div class="book-meta">
+
+            <div class="meta-item">
+              <span class="meta-label">Author</span>
+              <strong>{{ selectedBook.author }}</strong>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">Genre</span>
+              <strong>{{ selectedBook.genre }}</strong>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">Published</span>
+              <strong>{{ selectedBook.year }}</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="details-actions">
+
+        <a routerLink="/books" class="back-btn">
+          Back to Collection
+        </a>
+
+        <button
+          type="button"
+          class="favorite-btn"
+          (click)="toggleFavorite(selectedBook.id)"
+        >
+          {{ bookService.isFavorite(selectedBook.id)
+            ? '♥ Remove Favorite'
+            : '♡ Add to Favorites' }}
+        </button>
+
+        <a
+          [routerLink]="['/books/edit', selectedBook.id]"
+          class="edit-btn"
+        >
+          Edit Book
+        </a>
+
+      </div>
+
+    </div>
+
+  }
+
+</section>
